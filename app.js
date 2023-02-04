@@ -1,7 +1,13 @@
-// document.write("hello world");
-// alert("hello world");
+// Statements - Set of Instructions
+// Comments - Self Understanding, Debugging - Ctrl + /
+
+// this is console statement
 // console.log("hello world");
 
-document.write({ name: "praveen" });
-alert({ name: "praveen" });
-console.log({ name: "praveen" });
+/*
+console.log("hello people");
+console.log("hello anna");
+console.log("this is javascript");
+*/
+
+console.log("hello people");
