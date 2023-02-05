@@ -1,11 +1,12 @@
-// "" or '' - Just preference, no advantage
+// String Concatenation - combine string values
+// `` - backticks (template strings) easier option.
 
-const text = 'Johns courses are best ';
+const firstName = 'Praveen';
+const lastName = 'Kumar';
+let fullName = firstName + ' ' + lastName;
 
-// When text will have single quotes in them
-// const text0 = 'John\'s courses are best ';
-const text1 = "John's courses are best ";
+console.log('Hello there, my fullname is : ' + fullName);
 
-// const text2 = "johns courses are best';  ❌
-
-console.log(text1);
+const website = 'google';
+const url = 'https://www.' + website + '.com';
+console.log(url);
