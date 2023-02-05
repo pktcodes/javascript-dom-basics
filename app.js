@@ -1,18 +1,11 @@
-// LET VS CONST VS VAR
+// "" or '' - Just preference, no advantage
 
-// using var
-var value = "some value";
-value = "some other value";
+const text = 'Johns courses are best ';
 
-// using let
-let name = "john";
-name = "peter";
+// When text will have single quotes in them
+// const text0 = 'John\'s courses are best ';
+const text1 = "John's courses are best ";
 
-// using const (CONSTANT) - can't re-assign
-const lastName = "smith";
-// lastName = "peter"; ❌
-// const firstName; ❌
+// const text2 = "johns courses are best';  ❌
 
-console.log(value);
-console.log(name);
-console.log(lastName);
+console.log(text1);
