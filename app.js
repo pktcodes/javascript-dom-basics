@@ -1,51 +1,32 @@
-// Implicit Type Conversion
+// Data Types - 7 total
+// Primitive - String, Number, Boolean, Null, Undefined, Symbol
+// Object - Arrays, Functions, Objects
 
-const number1 = 50;
-const number2 = 20;
-const numberTotal = number1 + number2;
-console.log(numberTotal);
+// typeof - operator (typeof variable) (typeof value)
 
-const string1 = 'praveen';
-const string2 = 'kumar';
-const stringSubtract = string1 - string2;
-console.log('stringSubtract: ' + stringSubtract); //Output: NaN - Not a number
+//string
+const text = 'some text';
 
-const stringNumber1 = '35';
-const stringNumber2 = '40';
+// number
+const number = 4;
 
-const stringNumberSubtract = stringNumber1 - stringNumber2;
-console.log('stringNumberSubtract: ' + stringNumberSubtract);
-//Output: -5 - Javascript tries to convert the string to number if possible and will do the calculation
+//boolean
+const value1 = true;
+const value2 = false;
 
-const stringNumberMultiply = stringNumber1 * stringNumber2;
-console.log('stringNumberMultiply: ' + stringNumberMultiply);
+// null
+const result = null;
 
-const stringNumberDivision = stringNumber1 / stringNumber2;
-console.log('stringNumberDivision: ' + stringNumberDivision);
+// undefined
+let randomNumber;
 
-// But for addition it will concatenate
-const stringNumberaddition = stringNumber1 + stringNumber2;
-console.log('stringNumberaddition: ' + stringNumberaddition);
+// typeof
+console.log(typeof text);
+console.log(typeof 'hello world');
+console.log(typeof number);
+console.log(typeof value1);
 
-// Even if there is a number, because of the other string value it will concatenate
-const numberForAdd = 1;
-const stringNumberForAdd = '20';
-const stringTextForAdd = 'pants';
+console.log(typeof result);
+// It shows object instead of null because javascript has this bug from the beginning since a lot of code is dependent on it, they will not fix it.
 
-const numberAndStringNumber = numberForAdd + stringNumberForAdd;
-console.log('numberAndStringNumber: ' + numberAndStringNumber);
-
-const numberAndStringText = numberForAdd + stringTextForAdd;
-console.log('numberAndStringText: ' + numberAndStringText);
-
-// From input we are getting string by default so we are parsing it
-const randomNumber = 13;
-document.querySelector('.form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  let value = document.getElementById('amount').value;
-  value = parseInt(value);
-  console.log('Input Value Type');
-  console.log(value);
-  console.log('Sum of Two Values');
-  console.log(randomNumber + value);
-});
+console.log(typeof randomNumber);
