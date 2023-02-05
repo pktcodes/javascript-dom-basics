@@ -1,21 +1,30 @@
 // Numbers
-// Loosely Typed = we don't declare any type, by default javascript defines data type for variables depending on the input given. For strictly typed language like Java, we have Typescript
+// +=, -=, /=, *=, ++ , --, %
+// Modulus (%) operator returns the remainder after integer division
 
-const number = 32;
-let decimalNumber = 2.456;
-// const decimalString = '2.456';
-// decimalNumber = 'are good';
+let number = 50;
 
-const addition = number + decimalNumber;
-const subtraction = number - decimalNumber;
-const multiplication = number * decimalNumber;
-const division = number / decimalNumber;
+// number = number + 5;
+number += 5;
 
-// console.log(number);
-// console.log(decimalNumber);
-// console.log(decimalString);
+// number = number - 5;
+number -= 5;
 
-console.log(addition);
-console.log(subtraction);
-console.log(multiplication);
-console.log(division);
+// number = number * 5;
+number *= 5;
+
+// number = number / 5;
+number /= 5;
+
+// number = number + 1;
+number++;
+
+// number = number - 1;
+number--;
+
+const pizzaSilces = 10;
+const children = 3;
+const reminaingAmount = 10 % 3;
+
+console.log(number);
+console.log(reminaingAmount);
