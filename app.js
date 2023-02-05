@@ -1,13 +1,14 @@
-// Statements - Set of Instructions
-// Comments - Self Understanding, Debugging - Ctrl + /
+// Variable - Most Basic Building Block
+// Variables - Store, Access, Modify === Value
+// Declare, Assignment Operator, Assign Value
 
-// this is console statement
-// console.log("hello world");
+let name = "Praveen Kumar";
 
-/*
-console.log("hello people");
-console.log("hello anna");
-console.log("this is javascript");
-*/
-
-console.log("hello people");
+console.log(name);
+// some lines of code
+console.log(name);
+// some lines of code
+console.log(name);
+// some lines of code
+console.log(name);
+// some lines of code
