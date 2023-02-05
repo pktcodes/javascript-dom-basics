@@ -1,30 +1,51 @@
-// Numbers
-// +=, -=, /=, *=, ++ , --, %
-// Modulus (%) operator returns the remainder after integer division
+// Implicit Type Conversion
 
-let number = 50;
+const number1 = 50;
+const number2 = 20;
+const numberTotal = number1 + number2;
+console.log(numberTotal);
 
-// number = number + 5;
-number += 5;
+const string1 = 'praveen';
+const string2 = 'kumar';
+const stringSubtract = string1 - string2;
+console.log('stringSubtract: ' + stringSubtract); //Output: NaN - Not a number
 
-// number = number - 5;
-number -= 5;
+const stringNumber1 = '35';
+const stringNumber2 = '40';
 
-// number = number * 5;
-number *= 5;
+const stringNumberSubtract = stringNumber1 - stringNumber2;
+console.log('stringNumberSubtract: ' + stringNumberSubtract);
+//Output: -5 - Javascript tries to convert the string to number if possible and will do the calculation
 
-// number = number / 5;
-number /= 5;
+const stringNumberMultiply = stringNumber1 * stringNumber2;
+console.log('stringNumberMultiply: ' + stringNumberMultiply);
 
-// number = number + 1;
-number++;
+const stringNumberDivision = stringNumber1 / stringNumber2;
+console.log('stringNumberDivision: ' + stringNumberDivision);
 
-// number = number - 1;
-number--;
+// But for addition it will concatenate
+const stringNumberaddition = stringNumber1 + stringNumber2;
+console.log('stringNumberaddition: ' + stringNumberaddition);
 
-const pizzaSilces = 10;
-const children = 3;
-const reminaingAmount = 10 % 3;
+// Even if there is a number, because of the other string value it will concatenate
+const numberForAdd = 1;
+const stringNumberForAdd = '20';
+const stringTextForAdd = 'pants';
 
-console.log(number);
-console.log(reminaingAmount);
+const numberAndStringNumber = numberForAdd + stringNumberForAdd;
+console.log('numberAndStringNumber: ' + numberAndStringNumber);
+
+const numberAndStringText = numberForAdd + stringTextForAdd;
+console.log('numberAndStringText: ' + numberAndStringText);
+
+// From input we are getting string by default so we are parsing it
+const randomNumber = 13;
+document.querySelector('.form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  let value = document.getElementById('amount').value;
+  value = parseInt(value);
+  console.log('Input Value Type');
+  console.log(value);
+  console.log('Sum of Two Values');
+  console.log(randomNumber + value);
+});
