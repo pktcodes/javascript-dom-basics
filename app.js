@@ -1,21 +1,18 @@
-// can contain digits, letters, underscore, $
-// must start with letter, $ or _
-let $random_123 = "random";
-console.log($random_123);
+// LET VS CONST VS VAR
 
-// no keyword
-// let let = '123'; ❌
+// using var
+var value = "some value";
+value = "some other value";
 
-// cannot start with number
-// let 123$randomNumber = "random"; ❌
+// using let
+let name = "john";
+name = "peter";
 
-// case sensitive - fullname vs Fullname
-let fullname = "praveen";
-let Fullname = "Praveen";
-console.log(fullname, Fullname);
+// using const (CONSTANT) - can't re-assign
+const lastName = "smith";
+// lastName = "peter"; ❌
+// const firstName; ❌
 
-// camelCase or underscore - common convention
-let fullName = "praveenKumar";
-let full_name = "praveen_kumar";
-console.log(fullName);
-console.log(full_name);
+console.log(value);
+console.log(name);
+console.log(lastName);
