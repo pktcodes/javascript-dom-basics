@@ -1,14 +1,46 @@
 // Arrays, Functions and Objects
-// Functions - declare, invoke
+// params - when declare/define
+// placeholders, local vars
+// arguments - when invoke/call/run
+// use vars/values, multiple params, undefined
 
-function hello() {
-  console.log('There is Anna');
-  console.log('There is John');
-  console.log('There is Susan');
+const bob = 'bob';
+const anna = 'anna';
+const susan = 'susan';
+
+function greet(name, second) {
+  console.log(second);
+  console.log('Hello there ' + name);
 }
+// greet Bob
+greet(45);
 
-hello();
-// some code here
-hello();
-// some code here
-hello();
+// greet Anna
+greet(anna, bob);
+
+// greet Susan
+greet('susan');
+
+/*
+============================
+Without Params and Arguments
+============================
+*/
+// function helloBob() {
+//   console.log('Hello there, Bob');
+// }
+// function helloJohn() {
+//   console.log('Hello there, John');
+// }
+// function helloSusan() {
+//   console.log('Hello there, Susan');
+// }
+
+// // greet bob
+// helloBob();
+
+// // greet john
+// helloJohn();
+
+// // greet susan
+// helloSusan();
