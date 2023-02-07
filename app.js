@@ -1,46 +1,24 @@
 // Arrays, Functions and Objects
-// params - when declare/define
-// placeholders, local vars
-// arguments - when invoke/call/run
-// use vars/values, multiple params, undefined
+// return
+// default undefined, shortcuts, ignores after
+// 1 inch = 2.54 cms
 
-const bob = 'bob';
-const anna = 'anna';
-const susan = 'susan';
+const wallHeight = 80;
 
-function greet(name, second) {
-  console.log(second);
-  console.log('Hello there ' + name);
+function calculate(value) {
+  // const newValue = value * 2.54;
+  // console.log('The value in cm: ' + newValue + 'cm');
+  // return newValue;
+
+  return value * 2.54;
+
+  //code gets ignored after return
+  console.log('hello world');
 }
-// greet Bob
-greet(45);
 
-// greet Anna
-greet(anna, bob);
+const width = calculate(100);
+const height = calculate(wallHeight);
 
-// greet Susan
-greet('susan');
+const dimensions = [width, height];
 
-/*
-============================
-Without Params and Arguments
-============================
-*/
-// function helloBob() {
-//   console.log('Hello there, Bob');
-// }
-// function helloJohn() {
-//   console.log('Hello there, John');
-// }
-// function helloSusan() {
-//   console.log('Hello there, Susan');
-// }
-
-// // greet bob
-// helloBob();
-
-// // greet john
-// helloJohn();
-
-// // greet susan
-// helloSusan();
+console.log(dimensions);
