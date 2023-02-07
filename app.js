@@ -1,24 +1,29 @@
 // Arrays, Functions and Objects
-// return
-// default undefined, shortcuts, ignores after
-// 1 inch = 2.54 cms
+// expressions - another way define a function
+// create a variable, assign to FUNCTION (not value), use var
+// diff - hoisting, use - arrow func,libraries,
 
-const wallHeight = 80;
-
-function calculate(value) {
-  // const newValue = value * 2.54;
-  // console.log('The value in cm: ' + newValue + 'cm');
-  // return newValue;
-
-  return value * 2.54;
-
-  //code gets ignored after return
-  console.log('hello world');
+// Function Definition / Declaration - Will invoke using function name
+function addValues(number1, number2) {
+  return number1 + number2;
 }
 
-const width = calculate(100);
-const height = calculate(wallHeight);
+const firstValue = addValues(3, 4);
+const secondValue = addValues(10, 35);
 
-const dimensions = [width, height];
+// Function Expression - will invoke using variable name in reference to function
+const add = function (number1, number2) {
+  return number1 + number2;
+};
 
-console.log(dimensions);
+const thirdValue = add(5, 6);
+
+// const values = [firstValue, secondValue, add(5, 6)];
+const values = [firstValue, secondValue, thirdValue];
+console.log(values);
+
+// From ES6 - Arrow function is a function expression
+const mutliply = (number1, number2) => number1 * number2;
+
+// In Gatsby - React Based Framework, function expression will be used
+// export.newFunction = function () {};
