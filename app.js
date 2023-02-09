@@ -1,13 +1,23 @@
 // Conditional Statements
-// >, <, >=, <=, ==, ===, !=, !===
+// Comparison Operators
+// >, <, >=, <=, ==, ===, !=, !==
+// else if and !
 
-const value1 = 2 > 1;
-console.log(typeof value1);
+const num1 = 6;
+const num2 = 6;
+const result = num1 >= num2;
 
-const value2 = 1 > 2;
-
-if (value1) {
-  console.log('hello world');
+if (num1 > num2) {
+  console.log('num1 is greater than num2');
+} else if (result) {
+  console.log('num1 is equal to num2');
 } else {
-  console.log('hello people');
+  console.log('num2 is greater than num1');
+}
+
+// !
+const value = false;
+
+if (!value) {
+  console.log('value is not false');
 }
