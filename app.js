@@ -1,18 +1,11 @@
-// Conditional Statements
-// Comparison Operators
-// >, <, >=, <=, ==, ===, !=, !==
-// == checks only value
-// === checks value and type
+// Logical Operators
+// (|| - OR), (&& - AND), !
 
-const num1 = 6;
-const num2 = 6;
-// const num2 = '6'
+const name = 'peter';
+const age = 24;
 
-// const value1 = num1 == num2;
-// const value2 = num1 === num2;
-
-const value1 = num1 != num2;
-const value2 = num1 !== num2;
-
-console.log(value1);
-console.log(value2);
+if (name !== 'peter' || age === 24) {
+  console.log('hello there, ' + name);
+} else {
+  console.log('wrong values');
+}
