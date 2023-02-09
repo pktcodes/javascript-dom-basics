@@ -1,11 +1,12 @@
 // Loops
 // repeatedly run a block of code while condition is true
-// while loop
-// TURN OFF AUTOSAVE
+// do while loop
+// code block first, condition second
+// runs at least
 
-let amount = 10;
+let money = 0;
 
-while (amount > 0) {
-  console.log('I have ' + amount + ' dollars and I am going to mall.');
-  amount--;
-}
+do {
+  console.log('I have ' + money + ' dollars');
+  money++;
+} while (money < 10);
