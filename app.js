@@ -1,26 +1,13 @@
-// Arrays, Functions and Objects
-// Objects - key/value pairs  methods
-// dot notation
+// Conditional Statements
+// >, <, >=, <=, ==, ===, !=, !===
 
-const person = {
-  name: 'john',
-  age: 25,
-  education: true,
-  married: false,
-  siblings: ['peter', 'susan', 'anna'],
-  greeting: function () {
-    console.log('Hi, I am John');
-  },
-  // From ES6 - shorthand for the method
-  // greeting() {
-  //   console.log('Hi, I am John');
-  // },
-};
+const value1 = 2 > 1;
+console.log(typeof value1);
 
-// Override value of property
-person.name = 'bob';
+const value2 = 1 > 2;
 
-console.log(person.name);
-console.log(person.siblings[1]);
-
-person.greeting();
+if (value1) {
+  console.log('hello world');
+} else {
+  console.log('hello people');
+}
