@@ -1,12 +1,13 @@
 // Loops
 // repeatedly run a block of code while condition is true
-// do while loop
-// code block first, condition second
-// runs at least
+// for loop
 
-let money = 0;
+// let i;
 
-do {
-  console.log('I have ' + money + ' dollars');
-  money++;
-} while (money < 10);
+// for (i = 0; i < 10; i++) {
+//   console.log('I have ' + i + ' dollars');
+// }
+
+for (let number = 11; number >= 0; number--) {
+  console.log('I have ' + number + ' dollars');
+}
