@@ -1,24 +1,16 @@
-// Reference vs Value
-// Primitive Data Types
-// String, Number, Symbol, Boolean, Undefined, Null,
-// Arrays, Functions, Objects = object
-// typeof
+// null and undefined
+// both represent "no value"
 
-// when assigning primitive data type value to a variable any changes are made directly to that value, without affecting original value
+// undefined - "Javascript cannot find a value for this"
 
-// when assigning non-primitive data type value to a variable is done by reference so any changes will affect all the references.
+// variable without value
+// missing function arguments
+// missing object properties
 
-const name1 = 'bob';
-let name2 = name1;
-name2 = 'peter';
-console.log(name1);
-console.log(name2);
+// null - "developer sets the value"
 
-const person = {
-  name: 'bob',
-};
-// const person2 = person;
-const person2 = { ...person };
-person2.name = 'peter';
-console.log(person.name);
-console.log(person2.name);
+const number = 20 + null; //20 + 0
+console.log(number);
+
+const number2 = 20 + undefined; //Not a number
+console.log(number2);
