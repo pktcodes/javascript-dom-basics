@@ -1,28 +1,21 @@
-// Local Scope
-// no name collision, can not be access from outside code blocks
-// if - NOT VAR
+// Variable Lookup
+// {} - code block
 
-let name = 'anna';
+const globalNumber = 5;
 
-function calculate() {
-  let name = 'anna';
-  const age = 25;
-  becomesGlobal = 'global variable';
-  //when keyword not used, javascript takes it as global variable
+function add(num1, num2) {
+  const globalNumber = 20;
+  const result = num1 + num2 + globalNumber;
+
+  function multiply() {
+    const globalNumber = 10;
+    const multiplyResult = result * globalNumber;
+    console.log(multiplyResult);
+  }
+  // console.log(multiplyResult); - Accessing local to global will not work
+
+  multiply();
+  return result;
 }
 
-calculate();
-console.log(becomesGlobal);
-
-// Just code block
-{
-  name: 'bobo';
-  age: 25;
-}
-
-if (true) {
-  // some other code.........
-  console.log(name);
-}
-
-console.log(`Hi, my name is ${name} and I'm awesome`);
+console.log(add(3, 4));
