@@ -1,27 +1,24 @@
-// Functions, return, if, arrays, for loop
+// Reference vs Value
+// Primitive Data Types
+// String, Number, Symbol, Boolean, Undefined, Null,
+// Arrays, Functions, Objects = object
+// typeof
 
-const gas = [20, 30, 50, 40];
-const food = [30, 10, 20, 30];
+// when assigning primitive data type value to a variable any changes are made directly to that value, without affecting original value
 
-function calculateTotal(arr) {
-  let total = 0;
-  for (let i = 0; i < arr.length; i++) {
-    total += arr[i];
-  }
-  if (total > 100) {
-    console.log('Whoa! You are spending way too much.');
-    return total;
-  }
-  console.log('You are spending is less than 100.');
-  return total;
-}
+// when assigning non-primitive data type value to a variable is done by reference so any changes will affect all the references.
 
-const gasTotal = calculateTotal(gas);
-const foodTotal = calculateTotal(food);
-const utilitiesTotal = calculateTotal([525 + 21 + 75 + 50]);
+const name1 = 'bob';
+let name2 = name1;
+name2 = 'peter';
+console.log(name1);
+console.log(name2);
 
-console.log({
-  gas: gasTotal,
-  food: foodTotal,
-  utilities: utilitiesTotal,
-});
+const person = {
+  name: 'bob',
+};
+// const person2 = person;
+const person2 = { ...person };
+person2.name = 'peter';
+console.log(person.name);
+console.log(person2.name);
