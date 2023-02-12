@@ -1,11 +1,18 @@
-// Powerful Array Methods
-// forEach, map, filter, find, reduce
-// Iterate over array - no for loop required
-// Accept CALLBACK function as an argument, calls Callback against each item in a array. Reference Item in the Callback Paramater.
+// forEach
+// does not return new array
 
-const numbers = [0, 1, 2, 3, 4];
+const people = [
+  { name: 'bob', age: 25, role: 'developer' },
+  { name: 'anna', age: 19, role: 'designer' },
+  { name: 'susan', age: 23, role: 'boss' },
+];
 
-/* for loop */
-for (let i = 0; i < numbers.length; i++) {
-  console.log(numbers[i]);
+function showPeople(person) {
+  console.log(person.role);
 }
+
+// people.forEach(showPeople);
+
+people.forEach(function (person) {
+  console.log(person.role.toUpperCase());
+});
