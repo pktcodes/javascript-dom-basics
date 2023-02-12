@@ -1,24 +1,26 @@
-// unary operator -  typeof
-let text = 'some text';
-// console.log(typeof text); // operand
-// binary operator - assignment
-let number = 3;
-let number2 = 2 + 5;
-// ternary operator
-// condition ? (runs if true) : (runs if false)
+// Global Scope vs Local Scope
+// any variable outside code block {} is said to be in Global Scope
+// can be accesss anywhere in the program
+// Gotchas : name collisions, modify by mistake
 
-const value = 2 > 1;
+let name = 'anna';
+name = 'peter';
 
-/* Using Ternary Operator */
-value ? console.log('the value is true') : console.log('the value is false');
+function calculate() {
+  console.log(name);
+  name = 'orange';
+  function innerFunction(params) {
+    console.log(`Hi, my name is ${name} and I'm inner function`);
+    name = 'inner function';
+  }
+  innerFunction();
+}
 
-/* Using if else */
-// const value = 2 < 1;
+calculate();
 
-// console.log(typeof value);
+if (true) {
+  // some other code.........
+  console.log(name);
+}
 
-// if (value) {
-//   console.log('the value is true');
-// } else {
-//   console.log('the value is false');
-// }
+console.log(`Hi, my name is ${name} and I'm awesome`);
