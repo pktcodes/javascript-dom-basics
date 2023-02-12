@@ -1,16 +1,21 @@
-// null and undefined
-// both represent "no value"
+// Truthy and Falsy
+// "",'',``,0 ,-0 ,NaN ,false, null, undefined - Javascript evaluates these as false except these others are true
 
-// undefined - "Javascript cannot find a value for this"
+// const boolean1 = true;
+// const boolean2 = 2 > 1;
 
-// variable without value
-// missing function arguments
-// missing object properties
+// if (boolean1) {
+//   console.log('hey, it works!');
+// }
+// if (boolean2) {
+//   console.log('hey, it also works!');
+// }
 
-// null - "developer sets the value"
+const truthyValue = 'john';
+const falsyValue = '';
 
-const number = 20 + null; //20 + 0
-console.log(number);
-
-const number2 = 20 + undefined; //Not a number
-console.log(number2);
+if (falsyValue) {
+  console.log('the value is truthy');
+} else {
+  console.log('the value is falsy');
+}
