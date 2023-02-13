@@ -31,6 +31,6 @@ const students = [
   },
 ];
 
-function showName(name) {
-  console.log('name');
-}
+// function showName(name) {
+//   console.log('name');
+// }
