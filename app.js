@@ -1,36 +1,21 @@
-// find
-// returns single instance - (in this case object)
-// returns first match, if no match undefined
-// great for getting unique value
+// reduce
+// iterates, callback function
+// reduces to a single value - number, array, object
+// 1 parameter ('acc') - total of all calculations
+// 2 parameter ('curr') - current iteration/value
 
 const people = [
-  { name: 'bob', age: 25, role: 'developer', id: 1 },
-  { name: 'anna', age: 19, role: 'designer', id: 2 },
-  { name: 'susan', age: 23, role: 'boss', id: 3 },
-  { name: 'jennifer', age: 18, role: 'programmer', id: 4 },
+  { name: 'bob', age: 25, role: 'developer', id: 1, salary: 200 },
+  { name: 'anna', age: 19, role: 'designer', id: 2, salary: 300 },
+  { name: 'susan', age: 23, role: 'boss', id: 3, salary: 500 },
+  { name: 'jennifer', age: 18, role: 'programmer', id: 4, salary: 200 },
 ];
 
-const names = ['bob', 'peter', 'anna', 'susan'];
-console.log(
-  names.find(function (item) {
-    return item === 'bob';
-  })
-);
+const total = people.reduce(function (accumulator, currentItem) {
+  console.log(`accumulator : ${accumulator}`);
+  console.log(`currentItem : ${currentItem.salary} `);
+  accumulator += currentItem.salary;
+  return accumulator;
+}, 0);
 
-const person = people.find(function (item) {
-  return item.id === 3;
-});
-console.log(person);
-
-// undefined
-const personUndefined = people.find(function (item) {
-  return item.id === 5;
-});
-console.log(personUndefined);
-
-// Using Filter
-const personFilter = people.filter(function (item) {
-  return item.name === 'bob';
-});
-
-console.log(personFilter[0].name);
+console.log(total);
