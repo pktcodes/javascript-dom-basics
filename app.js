@@ -1,7 +1,7 @@
-// map
+// filter
 // does return a new array
-// does not change size of original array
-// uses values from original array when making new one
+// can manipulate the size of new array
+// returns based on condition
 
 const people = [
   { name: 'bob', age: 25, role: 'developer' },
@@ -10,25 +10,18 @@ const people = [
   { name: 'jennifer', age: 18, role: 'programmer' },
 ];
 
-// returns same size - 4
-const newArray = people.map(function (person) {
-  return `hello world`;
+const youngPeople = people.filter(function (person) {
+  return person.age < 25;
 });
+console.log(youngPeople);
 
-console.log(newArray);
-
-const newPeople = people.map(function (person) {
-  return {
-    firstName: person.name.toUpperCase(),
-    oldAge: person.age + 20,
-  };
+const developers = people.filter(function (person) {
+  return person.role == 'developer';
 });
+console.log(developers);
 
-console.log(newPeople);
-
-const names = people.map(function (person) {
-  return `<h1>${person.name}</h1>`;
+// empty array
+const seniorDevelopers = people.filter(function (person) {
+  return person.role == 'senior developer';
 });
-
-document.body.innerHTML = names.join('');
-console.log(names);
+console.log(seniorDevelopers);
