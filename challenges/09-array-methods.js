@@ -2,14 +2,14 @@
 
 // have access to students from data.js
 
-// map
+/* map */
 const updatedStudents = students.map(function (student) {
   student.role = 'student';
   return student;
 });
 // console.log(updatedStudents);
 
-// filter
+/* filter */
 const highScores = students.filter(function (student) {
   // if (student.score >= 80) {
   //   return student;
@@ -18,5 +18,10 @@ const highScores = students.filter(function (student) {
 
   return student.score >= 80;
 });
+// console.log(highScores);
 
-console.log(highScores);
+/* find */
+const specificId = students.find(function (student) {
+  return student.id === 2;
+});
+console.log(specificId);
