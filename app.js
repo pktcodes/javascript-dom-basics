@@ -1,27 +1,36 @@
-// filter
-// does return a new array
-// can manipulate the size of new array
-// returns based on condition
+// find
+// returns single instance - (in this case object)
+// returns first match, if no match undefined
+// great for getting unique value
 
 const people = [
-  { name: 'bob', age: 25, role: 'developer' },
-  { name: 'anna', age: 19, role: 'designer' },
-  { name: 'susan', age: 23, role: 'boss' },
-  { name: 'jennifer', age: 18, role: 'programmer' },
+  { name: 'bob', age: 25, role: 'developer', id: 1 },
+  { name: 'anna', age: 19, role: 'designer', id: 2 },
+  { name: 'susan', age: 23, role: 'boss', id: 3 },
+  { name: 'jennifer', age: 18, role: 'programmer', id: 4 },
 ];
 
-const youngPeople = people.filter(function (person) {
-  return person.age < 25;
-});
-console.log(youngPeople);
+const names = ['bob', 'peter', 'anna', 'susan'];
+console.log(
+  names.find(function (item) {
+    return item === 'bob';
+  })
+);
 
-const developers = people.filter(function (person) {
-  return person.role == 'developer';
+const person = people.find(function (item) {
+  return item.id === 3;
 });
-console.log(developers);
+console.log(person);
 
-// empty array
-const seniorDevelopers = people.filter(function (person) {
-  return person.role == 'senior developer';
+// undefined
+const personUndefined = people.find(function (item) {
+  return item.id === 5;
 });
-console.log(seniorDevelopers);
+console.log(personUndefined);
+
+// Using Filter
+const personFilter = people.filter(function (item) {
+  return item.name === 'bob';
+});
+
+console.log(personFilter[0].name);
