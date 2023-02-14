@@ -36,3 +36,18 @@ const averageScore =
   }, 0) / students.length;
 
 console.log(averageScore);
+
+/* Example - Square Bracket Notation */
+const subject = 'physics';
+
+const total = {};
+
+// Static
+total.math = 3;
+total.history = 1;
+total.arts = 1;
+
+// Dynamic Property Creation based on variable
+total[subject] = 'some value';
+
+console.log(total);
