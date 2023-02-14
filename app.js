@@ -1,28 +1,44 @@
-// Math
-// Standard built-in objects - always available
+// Date
 
-/* floor - round down  */
-// const number = 4.56789;
-// const result = Math.floor(number);
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
 
-/* ceil - round up  */
-// const number = 4.56789;
-// const result = Math.ceil(number);
+const days = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturtday',
+];
 
-/* Finding squareroot */
-// const result = Math.sqrt(25);
+// const date = new Date();
+const date = new Date('11/13/1995');
+console.log(date.getDate());
 
-/* Finding minimum */
-// const result = Math.min(4, 1, 5, 3, 7, 2, 1000);
+const day = date.getDay();
+console.log(days[day]);
 
-/* Finding maximum */
-// const result = Math.max(4, 1, 5, 3, 7, 2, 1000);
+const month = date.getMonth();
+console.log(months[month]);
 
-/* value of PI */
-// const result = Math.PI;
+const year = date.getFullYear();
+console.log(year);
 
-/* random - to get numbers from 1 to 10*/
-// const result = Math.floor(Math.random() * 10) + 1;
-const result = Math.ceil(Math.random() * 10);
-
-console.log(result);
+const fullDate = `${days[day]}, ${date.getDate()} ${
+  months[month]
+} ${date.getFullYear()}`;
+console.log(fullDate);
