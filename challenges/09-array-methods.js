@@ -2,14 +2,22 @@
 
 // have access to students from data.js
 
-/* map */
+/* 
+=============
+map 
+=============
+*/
 const updatedStudents = students.map(function (student) {
   student.role = 'student';
   return student;
 });
 // console.log(updatedStudents);
 
-/* filter */
+/* 
+=============
+filter 
+=============
+*/
 const highScores = students.filter(function (student) {
   // if (student.score >= 80) {
   //   return student;
@@ -20,13 +28,21 @@ const highScores = students.filter(function (student) {
 });
 // console.log(highScores);
 
-/* find */
+/* 
+=============
+find 
+=============
+*/
 const specificId = students.find(function (student) {
   return student.id === 2;
 });
 // console.log(specificId);
 
-/* reduce */
+/* 
+=============
+reduce 
+=============
+*/
 const averageScore =
   students.reduce(function (totalScore, student) {
     // console.log(totalScore);
@@ -35,10 +51,14 @@ const averageScore =
     return totalScore;
   }, 0) / students.length;
 
-console.log(averageScore);
+// console.log(averageScore);
 
-/* Example - Square Bracket Notation */
-const subject = 'physics';
+/* 
+=======================
+Square Bracket Notation  
+=======================
+*/
+const otherSubject = 'physics';
 
 const total = {};
 
@@ -48,6 +68,24 @@ total.history = 1;
 total.arts = 1;
 
 // Dynamic Property Creation based on variable
-total[subject] = 'some value';
+total[otherSubject] = 'some value';
 
-console.log(total);
+// console.log(total);
+
+/* 
+=============
+reduce - survey
+=============
+*/
+const survey = students.reduce(function (survey, student) {
+  const favoriteSubject = student.favoriteSubject;
+  // console.log(favoriteSubject);
+  if (survey[favoriteSubject]) {
+    survey[favoriteSubject] = survey[favoriteSubject] + 1;
+  } else {
+    survey[favoriteSubject] = 1;
+  }
+  return survey;
+}, {});
+
+console.log(survey);
