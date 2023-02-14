@@ -24,4 +24,15 @@ const highScores = students.filter(function (student) {
 const specificId = students.find(function (student) {
   return student.id === 2;
 });
-console.log(specificId);
+// console.log(specificId);
+
+/* reduce */
+const averageScore =
+  students.reduce(function (totalScore, student) {
+    // console.log(totalScore);
+    // console.log(student.score);
+    totalScore += student.score;
+    return totalScore;
+  }, 0) / students.length;
+
+console.log(averageScore);
