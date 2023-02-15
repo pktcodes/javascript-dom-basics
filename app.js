@@ -1,44 +1,20 @@
-// Date
+/*
+==================
+ window object = browser api - the browser provides a way to work with browser, which is accessible globally
+ =================
+document - javascript looks in window object if not found
+==================
+console.dir(); - to see the methods and properties of node object
+==================
+*/
+console.log(window);
 
-const months = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
+window.alert('hello');
 
-const days = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturtday',
-];
+console.log(window.document);
 
-// const date = new Date();
-const date = new Date('11/13/1995');
-console.log(date.getDate());
+// It provides the HTML document
+console.log(document);
 
-const day = date.getDay();
-console.log(days[day]);
-
-const month = date.getMonth();
-console.log(months[month]);
-
-const year = date.getFullYear();
-console.log(year);
-
-const fullDate = `${days[day]}, ${date.getDate()} ${
-  months[month]
-} ${date.getFullYear()}`;
-console.log(fullDate);
+// It provides the methods and properties available
+console.dir(document);
