@@ -1,20 +1,15 @@
-/*
-==================
- window object = browser api - the browser provides a way to work with browser, which is accessible globally
- =================
-document - javascript looks in window object if not found
-==================
-console.dir(); - to see the methods and properties of node object
-==================
-*/
-console.log(window);
+// Select the element or group of elements the we want
+// Decide the effect we want to apply to the selection
 
-window.alert('hello');
+// getElementById('element');
 
-console.log(window.document);
+const h1 = document.getElementById('title');
+h1.style.color = 'red';
 
-// It provides the HTML document
-console.log(document);
+// document.getElementById('btn').style.backgroundColor = 'blue';
+// document.getElementById('btn').style.color = 'white';
 
-// It provides the methods and properties available
-console.dir(document);
+/* Refactoring - using variable - efficient when selecting same element multiple times*/
+const btn = document.getElementById('btn');
+btn.style.backgroundColor = 'blue';
+btn.style.color = 'white';
