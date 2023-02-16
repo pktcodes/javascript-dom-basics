@@ -1,10 +1,11 @@
-// previousElementSibling
-// nextElementSibling
+// nodeValue
+// textContent
+// to get the content between the tags of the element
 
-// does not return whitespace
+const heading = document.getElementById('special');
+const value = heading.childNodes[0].nodeValue;
+console.log(value);
 
-const firstItem = document.querySelector('.first');
-firstItem.nextElementSibling.style.color = 'red';
-
-const lastItem = document.querySelector('#last');
-lastItem.previousElementSibling.style.color = 'blue';
+// An easy way to achieve same result
+const anotherValue = heading.textContent;
+console.log(anotherValue);
