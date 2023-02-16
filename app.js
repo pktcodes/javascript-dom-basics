@@ -1,11 +1,19 @@
-// nodeValue
-// textContent
-// to get the content between the tags of the element
+// getAttribute();
+// setAttribute();
 
-const heading = document.getElementById('special');
-const value = heading.childNodes[0].nodeValue;
-console.log(value);
+const first = document.querySelector('.first');
+const classValue = first.getAttribute('class');
+console.log(classValue);
 
-// An easy way to achieve same result
-const anotherValue = heading.textContent;
-console.log(anotherValue);
+const link = document.getElementById('link');
+const linkValue = link.getAttribute('href');
+console.log(linkValue);
+
+// Dynamically setting the attributes and value of element
+const last = link.nextElementSibling;
+last.setAttribute('class', 'first');
+last.textContent = 'i also have class of attribute';
+console.log(last);
+
+const links = document.querySelectorAll('.first');
+console.log(links);
