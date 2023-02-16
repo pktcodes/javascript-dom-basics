@@ -1,15 +1,24 @@
 // Select the element or group of elements the we want
 // Decide the effect we want to apply to the selection
 
-// getElementById('element');
+// getElementsByTagName('tagname');
+// node-list =  array-like object
+// index, length property but not array methods
 
-const h1 = document.getElementById('title');
-h1.style.color = 'red';
+const headings = document.getElementsByTagName('h2');
+// console.log(headings.length);
+headings[0].style.color = 'red';
 
-// document.getElementById('btn').style.backgroundColor = 'blue';
-// document.getElementById('btn').style.color = 'white';
+document.getElementsByTagName('li')[2].style.color = 'orange';
 
-/* Refactoring - using variable - efficient when selecting same element multiple times*/
-const btn = document.getElementById('btn');
-btn.style.backgroundColor = 'blue';
-btn.style.color = 'white';
+const items = document.getElementsByTagName('li');
+items[4].style.color = 'blue';
+console.log(items);
+
+/* Converting to array so we can use methods */
+const betterItems = [...items];
+console.log(betterItems);
+
+betterItems.forEach(function (item) {
+  console.log(item);
+});
