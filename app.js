@@ -2,7 +2,7 @@
 // createTextNode('text content') - between tags
 // element.appendChild(childElement) - connect child to parent
 
-// insertBefore('element','location'); - more control of location where element needs to placed instead of last automatically
+// replaceChild('new','old'); - replace old element with new element
 
 const result = document.getElementById('result');
 const heading2 = document.querySelector('.red');
@@ -23,5 +23,13 @@ const headingInResultDivText = document.createTextNode('dynamic heading');
 headingInResultDiv.appendChild(headingInResultDivText);
 headingInResultDiv.classList.add('blue');
 result.insertBefore(headingInResultDiv, heading2);
+
+const newHeading = document.createElement('h6');
+const newHeadingText = document.createTextNode(
+  'This is new heading h6 replacing div in body'
+);
+newHeading.appendChild(newHeadingText);
+newHeading.classList.add('red');
+document.body.replaceChild(newHeading, divInBody);
 
 console.log(result.children);
