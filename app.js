@@ -1,39 +1,19 @@
-// className - to check, add, remove classes
-// classList - a better approach to work with
+// createElement('element')
+// createTextNode('text content') - between tags
+// element.appendChild(childElement) - connect child to parent
 
-// className - to check class
-const firstHeading = document.getElementById('first');
-const checkClass = firstHeading.className;
-// console.log(checkClass);
+// for div
+const divInBody = document.createElement('div');
+const divInBodyText = document.createTextNode('i am simple div  in body');
+// attaching text as child to element
+divInBody.appendChild(divInBodyText);
+// attaching div element as child to body
+document.body.appendChild(divInBody);
 
-// className - to add class
-const secondHeading = document.getElementById('second');
-
-// problem - it overrides existing class
-// secondHeading.className = 'colors';
-// secondHeading.className = 'text';
-
-// solution - too add multiple classes using className
-const checkClassSecond = (secondHeading.className = 'colors text');
-// console.log(checkClassSecond);
-
-// classlist - to add class
-const thirdHeading = document.getElementById('third');
-// const addClassToThird = thirdHeading.classList.add('colors');
-const addClassToThird = thirdHeading.classList.add('colors', 'text');
-
-const thirdClassList = thirdHeading.classList;
-console.log(thirdClassList);
-
-// classList - to remove class
-thirdHeading.classList.remove('colors');
-console.log(thirdClassList);
-
-// classList - to check class
-const checkClassThird = thirdHeading.classList.contains('colors');
-console.log(checkClassThird);
-if (checkClassThird) {
-  console.log('It contains colors class');
-} else {
-  console.log('it contains text class');
-}
+// heading
+const result = document.getElementById('result');
+const headingInResultDiv = document.createElement('h2');
+const headingInResultDivText = document.createTextNode('dynamic heading');
+headingInResultDiv.appendChild(headingInResultDivText);
+headingInResultDiv.classList.add('blue');
+result.appendChild(headingInResultDiv);
