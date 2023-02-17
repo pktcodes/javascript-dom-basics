@@ -1,19 +1,39 @@
-// getAttribute();
-// setAttribute();
+// className - to check, add, remove classes
+// classList - a better approach to work with
 
-const first = document.querySelector('.first');
-const classValue = first.getAttribute('class');
-console.log(classValue);
+// className - to check class
+const firstHeading = document.getElementById('first');
+const checkClass = firstHeading.className;
+// console.log(checkClass);
 
-const link = document.getElementById('link');
-const linkValue = link.getAttribute('href');
-console.log(linkValue);
+// className - to add class
+const secondHeading = document.getElementById('second');
 
-// Dynamically setting the attributes and value of element
-const last = link.nextElementSibling;
-last.setAttribute('class', 'first');
-last.textContent = 'i also have class of attribute';
-console.log(last);
+// problem - it overrides existing class
+// secondHeading.className = 'colors';
+// secondHeading.className = 'text';
 
-const links = document.querySelectorAll('.first');
-console.log(links);
+// solution - too add multiple classes using className
+const checkClassSecond = (secondHeading.className = 'colors text');
+// console.log(checkClassSecond);
+
+// classlist - to add class
+const thirdHeading = document.getElementById('third');
+// const addClassToThird = thirdHeading.classList.add('colors');
+const addClassToThird = thirdHeading.classList.add('colors', 'text');
+
+const thirdClassList = thirdHeading.classList;
+console.log(thirdClassList);
+
+// classList - to remove class
+thirdHeading.classList.remove('colors');
+console.log(thirdClassList);
+
+// classList - to check class
+const checkClassThird = thirdHeading.classList.contains('colors');
+console.log(checkClassThird);
+if (checkClassThird) {
+  console.log('It contains colors class');
+} else {
+  console.log('it contains text class');
+}

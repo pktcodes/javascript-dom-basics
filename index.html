@@ -11,18 +11,24 @@
           Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
           sans-serif;
       }
-      ul {
+      h1 {
         text-transform: capitalize;
+      }
+      .colors {
+        background-color: red;
+        color: white;
+      }
+      .text {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        color: blue;
       }
     </style>
   </head>
   <body>
-    <ul>
-      <li class="first" id="first">i have a class attribute</li>
-      <a href="first.html" id="link">random link</a>
-      <li>i have no attributes</li>
-    </ul>
-
+    <h1 id="first" class="colors">first heading</h1>
+    <h1 id="second">second heading</h1>
+    <h1 id="third">third heading</h1>
     <!-- Link to JS -->
     <script src="./app.js"></script>
   </body>
