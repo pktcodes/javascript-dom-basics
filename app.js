@@ -1,11 +1,10 @@
-// prepend() - it adds at the start unlike append() which used to add at the end after js script tag
-// innerText - a better approach for adding text instead of create text node and appending to element
+// to remove elements from DOM
+// remove() - to remove an element
+// removeChild() - to remove the child from an element
 
-const heading = document.createElement('h2');
+const result = document.querySelector('#result');
+console.log(result);
+// result.remove();
 
-// add text to heading
-heading.innerText = 'i am dynamic heading';
-console.log(heading);
-
-// add element before
-document.body.prepend(heading);
+const heading = result.querySelector('h1');
+result.removeChild(heading);
