@@ -1,29 +1,18 @@
-// click - fires after full action occurs
-// mousedown - button is pressed
-// mouseup - button is released
-// mouseenter - moved onto an element
-// mouseleave - moved out of an element
+// keypress - when key is pressed
+// keydown - when key is down
+// keyup - when key is released
 
-const btn = document.querySelector('.btn');
+const nameInput = document.getElementById('name');
 
-btn.addEventListener('click', function () {
-  console.log('Hey, You Clicked Me.');
-});
+// nameInput.addEventListener('keypress', function () {
+//   console.log('key is pressed');
+// });
 
-btn.addEventListener('mousedown', function () {
-  console.log('down');
-});
+// nameInput.addEventListener('keydown', function () {
+//   console.log('key is down');
+// });
 
-btn.addEventListener('mouseup', function () {
-  console.log('up');
-});
-
-const heading = document.querySelector('h1');
-
-heading.addEventListener('mouseenter', function () {
-  heading.classList.add('red');
-});
-
-heading.addEventListener('mouseleave', function () {
-  heading.classList.remove('red');
+nameInput.addEventListener('keyup', function () {
+  // console.dir(nameInput);
+  console.log(nameInput.value);
 });
