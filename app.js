@@ -1,20 +1,14 @@
-// innerHTML - to insert HTML elements
-// textContent - to insert text inside the html element
+// CSS - Using classList or className is a better approach than using style property
 
-const list = document.getElementById('list');
-const firstItem = document.querySelector('.item');
-const divContent = document.getElementById('divContent');
+const random = document.getElementById('random');
+console.log(random.style);
+// random.style.backgroundColor = 'blue';
+// random.style.color = 'white';
+// random.style.fontSize = '5rem';
+// random.style.textTransform = 'uppercase';
 
-divContent.textContent = 'text implemented using text content';
+/* better approach with separate of concerns */
+random.classList.add('title');
 
-const firstVar = 'first random variable';
-
-// creating unordered list
-const anotherList = document.createElement('ul');
-anotherList.innerHTML = `<li class="item">${firstVar}</li><li>second item</li><li>third item</li>`;
-document.body.appendChild(anotherList);
-
-// same doesn't with textContent
-const usingTextContent = document.createElement('ul');
-usingTextContent.textContent = `<li class="item">${firstVar}</li><li>second item</li><li>third item</li>`;
-document.body.appendChild(usingTextContent);
+// style can be used when a specific property add to element
+random.style.color = 'chartreuse';
