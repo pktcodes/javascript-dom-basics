@@ -1,10 +1,20 @@
-// to remove elements from DOM
-// remove() - to remove an element
-// removeChild() - to remove the child from an element
+// innerHTML - to insert HTML elements
+// textContent - to insert text inside the html element
 
-const result = document.querySelector('#result');
-console.log(result);
-// result.remove();
+const list = document.getElementById('list');
+const firstItem = document.querySelector('.item');
+const divContent = document.getElementById('divContent');
 
-const heading = result.querySelector('h1');
-result.removeChild(heading);
+divContent.textContent = 'text implemented using text content';
+
+const firstVar = 'first random variable';
+
+// creating unordered list
+const anotherList = document.createElement('ul');
+anotherList.innerHTML = `<li class="item">${firstVar}</li><li>second item</li><li>third item</li>`;
+document.body.appendChild(anotherList);
+
+// same doesn't with textContent
+const usingTextContent = document.createElement('ul');
+usingTextContent.textContent = `<li class="item">${firstVar}</li><li>second item</li><li>third item</li>`;
+document.body.appendChild(usingTextContent);
