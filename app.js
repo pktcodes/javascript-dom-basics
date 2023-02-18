@@ -1,14 +1,11 @@
-// CSS - Using classList or className is a better approach than using style property
+// select element
+// addEventListener()
+// what event, what to do
 
-const random = document.getElementById('random');
-console.log(random.style);
-// random.style.backgroundColor = 'blue';
-// random.style.color = 'white';
-// random.style.fontSize = '5rem';
-// random.style.textTransform = 'uppercase';
+const heading = document.querySelector('h1');
 
-/* better approach with separate of concerns */
-random.classList.add('title');
-
-// style can be used when a specific property add to element
-random.style.color = 'chartreuse';
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', function () {
+  console.log('Hey, You Clicked Me.');
+  heading.classList.add('red');
+});
