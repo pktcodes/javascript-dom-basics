@@ -1,32 +1,39 @@
-// Web Storage API - provided by browser
-// session storage - persisting data between sessions i.e the current browser tab
-// local storage - persisting data when opening and closing browser
-// setItem, getItem , removeItem, clear
-// JSON.stringify(), JSON.parse
+/* 
+setTimeout - runs function once after specific time
 
-const friends = ['praveen', 'john', 'peter'];
+- pass function reference / anonymous function - traditional, arrow
+- duration in ms (1000 ms = 1 second)
+- default 0, will cover more extensively in async/await section
+- returns unique identifier
+- clearTimeout to cancel
+- on window object 
+*/
 
-// localStorage.setItem('friends', friends);
-
-/* problem - when access complex data types like array gives back strings when accessing */
-// const values = localStorage.getItem('friends');
-// console.log(values[1]);
-
-// solution
-localStorage.setItem('friends', JSON.stringify(friends));
-
-const values = JSON.parse(localStorage.getItem('friends'));
-console.log(values[0]);
-
-let fruits;
-if (localStorage.getItem('fruits')) {
-  fruits = JSON.parse(localStorage.getItem('fruits'));
-} else {
-  fruits = [];
+function sayHello() {
+  console.log('Hi, I am John');
 }
 
-console.log(fruits);
-// fruits.push('apple');
-fruits.push('orange');
-console.log(fruits);
-localStorage.setItem('fruits', JSON.stringify(fruits));
+// setTimeout(sayHello, 1000);
+
+// will not work as expected - why? the function gets immediately invoked when page loads
+// setTimeout(sayHello(), 1000);
+
+// alternative approach - ES6 arrow functions
+setTimeout(function () {
+  // console.log('Hello there, I am John');
+}, 1000);
+
+// pass arguments
+function showScore(name, score) {
+  console.log(`hello ${name}, your score is ${score}`);
+}
+// setTimeout(showScore, 1000, 'peter', '35');
+
+// clearTimeout
+const firstID = setTimeout(showScore, 1000, 'peter', '35');
+const secondID = setTimeout(showScore, 1000, 'john', '40');
+
+clearTimeout(firstID);
+
+// on window
+// window.setTimeout();
