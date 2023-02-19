@@ -1,14 +1,20 @@
-// submit event listener
-// prevent default
-// how to get a value
+// Web Storage API - provided by browser
+// session storage - persisting data between sessions i.e the current browser tab
+// local storage - persisting data when opening and closing browser
+// setItem, getItem , removeItem, clear
 
-const form = document.getElementById('form');
-const name = document.getElementById('name');
-const password = document.getElementById('password');
+// localStorage.setItem('name', 'praveen');
+// sessionStorage.setItem('name', 'kumar');
 
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  console.log('Hey, You Clicked Me');
-  console.log(name.value);
-  console.log(password.value);
-});
+localStorage.setItem('name', 'praveen');
+localStorage.setItem('friend', 'kumar');
+localStorage.setItem('job', 'web developer');
+localStorage.setItem('address', 'illinois');
+
+const name = localStorage.getItem('name');
+console.log(name);
+
+const anotherName = localStorage.removeItem('name');
+console.log(anotherName);
+
+localStorage.clear();
