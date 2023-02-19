@@ -1,18 +1,30 @@
-// keypress - when key is pressed
-// keydown - when key is down
-// keyup - when key is released
+// event object argument e,evt
+// info about triggered event
+// event.type
+// event.currentTarget
+// this keyword
+// preventDefault() - prevents default behaviour
 
-const nameInput = document.getElementById('name');
-
-// nameInput.addEventListener('keypress', function () {
-//   console.log('key is pressed');
-// });
-
-// nameInput.addEventListener('keydown', function () {
-//   console.log('key is down');
-// });
-
-nameInput.addEventListener('keyup', function () {
-  // console.dir(nameInput);
-  console.log(nameInput.value);
+const heading = document.querySelector('h1');
+// console.log(heading);
+heading.addEventListener('click', function (event) {
+  console.log(event.currentTarget);
+  event.currentTarget.classList.add('red');
+  console.log(event.type);
 });
+
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+  console.log(e);
+  e.currentTarget.classList.add('blue');
+  // this works similar but doesn't work good with arrow functions
+  console.log(this);
+});
+
+// preventing the default behavior happening i.e here going upto page
+function linkClick(event) {
+  event.preventDefault();
+}
+
+const link = document.getElementById('link');
+link.addEventListener('click', linkClick);
