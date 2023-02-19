@@ -1,23 +1,18 @@
 /* 
-setInterval - runs function repeatedly at specific intervals
+The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed without waiting for stylesheets, images, and subframes to finish loading.
 
-- pass function reference / anonymous function - traditional, arrow
-- duration in ms (1000 ms = 1 second)
-- default 0, will cover more extensively in async/await section
-- returns unique identifier
-- clearInterval to cancel
-- on window object 
+window.addEventListener('DOMContentLoaded', function () {
+  // code goes here
+});
+
+document.addEventListener.....
 */
 
-function showScore(name, score) {
-  console.log(`Hi ${name}, your score is ${score}`);
-}
+// Global Event
 
-// setInterval(showScore, 1000);
-
-const firstID = setInterval(showScore, 1000, 'peter', 35);
-// console.log(firstID);
-const secondID = setInterval(showScore, 4000, 'susan', 50);
-
-// clearInterval
-clearInterval(firstID);
+// In simple terms, it looks for js once the dom content html is loaded
+window.addEventListener('DOMContentLoaded', function () {
+  const heading = document.querySelector('h1');
+  console.log(heading);
+  heading.style.color = 'red';
+});
