@@ -3,20 +3,25 @@
 // event capturing - fires at the root and fires until reaches target
 
 const container = document.querySelector('.container');
-const list = document.querySelector('.list-items');
+const btn = document.querySelector('.btn');
+// const heading = document.querySelector('.heading');
+// console.log(heading);
 
-function showBubbling(event) {
-  console.log('Current Target: ', event.currentTarget);
-  console.log('Target: ', event.target);
+function sayHello() {
+  console.log('Hey, You Clicked Me.');
 }
 
-// to stop the propagation of the events registered
-function stopPropagation(event) {
-  console.log('Hey, you clicked on list');
-  event.stopPropagation();
-}
+btn.addEventListener('click', function () {
+  const dynamicHeading = document.createElement('h1');
+  dynamicHeading.classList.add('heading');
+  dynamicHeading.textContent = "i'm heading inside the container";
+  container.appendChild(dynamicHeading);
+});
 
-container.addEventListener('click', showBubbling, { capture: true });
-document.addEventListener('click', showBubbling, { capture: true });
-window.addEventListener('click', showBubbling, { capture: true });
-list.addEventListener('click', showBubbling, { capture: true });
+container.addEventListener('click', function (event) {
+  if (event.target.classList.contains('heading')) {
+    console.log('hello there');
+  }
+});
+
+// heading.addEventListener('click', sayHello);
