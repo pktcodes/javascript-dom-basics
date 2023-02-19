@@ -25,22 +25,22 @@
         letter-spacing: 10px;
       }
       .btn {
+        display: block;
+        margin-bottom: 1rem;
         background: #f15025;
         color: white;
-        font-size: 1.2rem;
+        font-size: 2rem;
         border: none;
-        text-transform: capitalize;
-      }
-      a {
-        margin-top: 100vh;
-        display: block;
+        text-transform: uppercase;
       }
     </style>
   </head>
   <body>
-    <h1>this is a heading</h1>
-    <button type="submit" class="btn">click me</button>
-    <a href="#" id="link">link</a>
+    <button class="btn">first button</button>
+    <button class="btn">
+      second <strong>button <em>more nested</em> </strong>
+    </button>
+    <button class="btn">third button</button>
     <!-- Link to JS -->
     <script src="./app.js"></script>
   </body>
