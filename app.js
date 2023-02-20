@@ -1,24 +1,20 @@
-/* 
-Scroll Event - on element or document
+/*
+innerWidth - The read-only Window property the interior width of
+the window in pixels
 
-window.addEventListener('scroll', function () {
-  console.log(window.scrollY + 'px');
-  console.log(window.scrollX + 'px');
-});
+innerHeight - The read-only property of the Window interface
+returns the interior height of the window in pixels
 
-
-document.addEventListener.....
-
-scrollY - returns the number of pixels the document is currently scrolled along vertical axis(pageYOffset: deprecated)
-
-scrollX - returns the number of pixels the document is currently scrolled along horizontal axis(pageXOffset: deprecated)
-
+The Element.getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
 */
 
-// this event only works if they is scrollable area on the document i.e doesn't work when image is not there since no scroll is present
+console.log('Window Height: ' + window.innerHeight);
+console.log('WIndow Width: ' + window.innerWidth);
 
-window.addEventListener('scroll', function () {
-  console.log('Hey, You Scrolled the page');
-  console.log(window.scrollY + 'px');
-  console.log(window.scrollX + 'px');
+const btn = document.querySelector('.btn');
+const box = document.querySelector('.box');
+
+btn.addEventListener('click', function () {
+  const values = box.getBoundingClientRect();
+  console.log(values);
 });
