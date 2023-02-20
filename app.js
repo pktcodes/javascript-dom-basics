@@ -1,18 +1,20 @@
 /* 
-The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed without waiting for stylesheets, images, and subframes to finish loading.
+The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets, scripts, iframes, and images. This is in contrast to DOMContentLoaded, which is fired as soon as the page DOM has been loaded, without waiting for resources to finish loading
 
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   // code goes here
 });
 
 document.addEventListener.....
 */
 
-// Global Event
-
-// In simple terms, it looks for js once the dom content html is loaded
+window.addEventListener('load', function () {
+  console.log('I will run second');
+  const image = document.querySelector('img');
+  console.log(image);
+});
 window.addEventListener('DOMContentLoaded', function () {
-  const heading = document.querySelector('h1');
-  console.log(heading);
-  heading.style.color = 'red';
+  console.log('DOMContentLoaded: I will run first');
+  const image = document.querySelector('img');
+  console.log(image);
 });
